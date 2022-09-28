@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш Дом</title>
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="shortcut icon" href="http://dom71.ru/favicon.ico" type="image/x-icon">
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <div class="overlayForm" id="request">
+            <form action="/leave-an-order/" method="post" id="requestForm" data-send="ajax" name="request"
+                enctype="multipart/form-data">
+                <div class="oneField">
+                    <input type="text" value="" name="FIO" placeholder="ФИО" spellcheck="true" required />
+                </div>
+                <div class="oneField">
+                    <input type="text" value="" name="PHONE" placeholder="Телефон" spellcheck="true" required />
+                </div>
+                <div class="selectCustom resumeSelect">
+                    <select name="POST">
+                        <option value="">Должность</option>
+                        <option value="повар">повар</option>
+                        <option value="сиделка с проживанием">сиделка с проживанием</option>
+                        <option value="гувернантка">гувернантка</option>
+                        <option value="репетитор">репетитор</option>
+                        <option value="няня к грудничку">няня к грудничку</option>
+                        <option value="сиделка">сиделка</option>
+                        <option value="логопед-дефектолог">логопед-дефектолог</option>
+                        <option value="садовник">садовник</option>
+                        <option value="домработница/горничная">домработница/горничная</option>
+                        <option value="мажордом">мажордом</option>
+                        <option value="сиделка в больницу">сиделка в больницу</option>
+                        <option value="няня с проживанием">няня с проживанием</option>
+                        <option value="няня-воспитатель">няня-воспитатель</option>
+                        <option value="семейная пара">семейная пара</option>
+                    </select>
+                    <div class="customIcon">&nbsp;</div>
+                    <div class="customSelectWrap">Должность</div>
+                </div>
+                <div class="selectCustom graficSelect">
+                    <select name="GRAFIC">
+                        <option value="">График работы</option>
+                        <option value="11">любой</option>
+                        <option value="полный рабочий день">полный рабочий день</option>
+                        <option value="частичная занятость (несколько дней в неделю)">частичная занятость (несколько
+                            дней в неделю)</option>
+                        <option value="частичная занятость (несколько часов в день)">частичная занятость (несколько
+                            часов в день)</option>
+                        <option value="свободный график">свободный график</option>
+                        <option value="с проживанием">с проживанием</option>
+                        <option value="сутки/вахта">сутки/вахта</option>
+                    </select>
+                    <div class="customIcon"></div>
+                    <div class="customSelectWrap">График работы</div>
+                </div>
+                <div class="oneField">
+                    <textarea name="INFO" placeholder="Дополнительная информация" spellcheck="true"></textarea>
+                </div>
+                <input type="hidden" name="sendRequest" value="y" />
+                <div class="submitButton">
+                    <span class="buttonSubmit"><span><input type="submit" name="submit"
+                                value="Отправить" /></span></span>
+                </div>
+            </form>
+        </div>
+        <!--/ request send form -->
+
+        <!-- resume send form -->
+        <div class="overlayForm" id="resume">
+            <form action="/leave-a-vacancy/" method="post" id="resumeForm" data-send="ajax" name="resume"
+                enctype="multipart/form-data">
+                <div class="oneField">
+                    <input type="text" value="" name="FIO" placeholder="ФИО" spellcheck="true" required />
+                </div>
+                <div class="oneField">
+                    <input type="text" value="" name="PHONE" placeholder="Телефон" spellcheck="true" required />
+                </div>
+
+                <div class="oneField">
+                    <input type="text" value="" name="EDUCATION" placeholder="Образование" spellcheck="true" required />
+                </div>
+                <div class="selectCustom resumeSelect">
+                    <select name="POST">
+                        <option value="">Должность</option>
+                        <option value="повар">повар</option>
+                        <option value="сиделка с проживанием">сиделка с проживанием</option>
+                        <option value="гувернантка">гувернантка</option>
+                        <option value="репетитор">репетитор</option>
+                        <option value="няня к грудничку">няня к грудничку</option>
+                        <option value="сиделка">сиделка</option>
+                        <option value="логопед-дефектолог">логопед-дефектолог</option>
+                        <option value="садовник">садовник</option>
+                        <option value="домработница/горничная">домработница/горничная</option>
+                        <option value="мажордом">мажордом</option>
+                        <option value="сиделка в больницу">сиделка в больницу</option>
+                        <option value="няня с проживанием">няня с проживанием</option>
+                        <option value="няня-воспитатель">няня-воспитатель</option>
+                        <option value="семейная пара">семейная пара</option>
+                    </select>
+                    <div class="customIcon">&nbsp;</div>
+                    <div class="customSelectWrap">Должность</div>
+                </div>
+                <div class="oneField file">
+                    <div>Прикрепить файл</div>
+                    <input type="file" value="" name="RESUME" placeholder="Образование" spellcheck="true" required />
+                </div>
+                <input type="hidden" name="sendResume" value="y" />
+                <div class="submitButton">
+                    <span class="buttonSubmit"><span><input type="submit" name="submit"
+                                value="Отправить" /></span></span>
+                </div>
+            </form>
+        </div>
+        <!--/ resume send form -->
+
+        <div id="top">
+            <span id="toTopBg">&nbsp;</span>
+            <span id="toTopLink">наверх&nbsp;&uarr;</span>
+        </div>
+        <!--header-->
+        <header class="header">
+
+            <div id="requestWrap"></div>
+            <div id="resumeWrap"></div>
+
+            <div class="headerLogo">
+                <a href="/">&nbsp;</a>
+            </div>
+            <div class="headerContacts">
+                <div class="headerPhones">
+                    <span style='color:#fff;'>8 (4872) 70-40-18</span> <span style='color:#fff;'>8 (4872)
+                        70-40-19</span>
+                </div>
+                <div class="headerButtons">
+                    <a class="more" href="#request"><span class="rtMore"><span class="gdMore">Подобрать
+                                персонал</span></span></a>
+                    <a class="more" href="#resume"><span class="rtMore"><span class="gdMore">Отправить
+                                резюме</span></span></a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            <!--top menu-->
+            <div class="topMenuWrap">
+                <nav>
+
+
+                    <table summary="" class="topMenu">
+
+                        <tr>
+
+                            <td>
+
+                                <div class="firstLevelWrap">
+
+
+
+                                    <a href="/" class="root-item-selected">
+
+                                        <span class="menuLt">
+
+                                            <span class="menuRt">
+
+                                                <span class="menuGd">
+
+                                                    <span>
+
+                                                        О нас
+
+                                                    </span>
+
+                                                </span>
+
+                                            </span>
+
+                                        </span>
+
+                                    </a>
+
+                                    <div class="secondLevelWrap">
+                                        <ul>
+
+                                            <li>
+
+                                                <a href="/press/">
+                                                    <nobr>Пресса о нас</nobr>
+                                                </a>
+
+                                            </li>
+
+                            <td>
+
+                                <div class="firstLevelWrap">
+
+
+
+                                    <a href="/find-staff/" class="root-item">
+
+                                        <span class="menuLt">
+
+                                            <span class="menuRt">
+
+                                                <span class="menuGd">
+
+                                                    <span>
+
+                                                        Работодателю
+
+                                                    </span>
+
+                                                </span>
+
+                                            </span>
+
+                                        </span>
+
+                                    </a>
+
+                                    <div class="secondLevelWrap">
+                                        <ul>
+
+                                            <li>
+
+                                                <a href="/find-staff/">
+                                                    <nobr>Подобрать персонал</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/advice-for-employers/">
+                                                    <nobr>Советы работодателям</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/nanny-to-a-baby/">
+                                                    <nobr>Найти няню к грудничку</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/nanny-tutor/">
+                                                    <nobr>Найти няню - воспитатель</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/governess/">
+                                                    <nobr>Найти гувернантку</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/tutor/">
+                                                    <nobr>Найти репетитора</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/housekeeper/">
+                                                    <nobr>Найти домработницу</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/nurse/">
+                                                    <nobr>Найти сиделку</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/chef/">
+                                                    <nobr>Найти повара</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/a-married-couple/">
+                                                    <nobr>Найти семейную пару</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/the-driver/">
+                                                    <nobr>Найти водителя </nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/assistant-on-economy/">
+                                                    <nobr>Найти помощника по хозяйству</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/the-gardener/">
+                                                    <nobr>Найти садовника</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/economka/">
+                                                    <nobr>Найти экономку</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/uprarvlyayushchiy/">
+                                                    <nobr>Найти управляющего</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/find-staff/we-recommend/">
+                                                    <nobr>Мы рекомендуем</nobr>
+                                                </a>
+
+                                            </li>
+
+                            <td>
+
+                                <div class="firstLevelWrap">
+
+
+
+                                    <a href="/vakansi/" class="root-item">
+
+                                        <span class="menuLt">
+
+                                            <span class="menuRt">
+
+                                                <span class="menuGd">
+
+                                                    <span>
+
+                                                        Соискателю
+
+                                                    </span>
+
+                                                </span>
+
+                                            </span>
+
+                                        </span>
+
+                                    </a>
+
+                                    <div class="secondLevelWrap">
+                                        <ul>
+
+                                            <li>
+
+                                                <a href="/vakansi/applicants/">
+                                                    <nobr>Соискателям</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/nanny-to-a-baby/">
+                                                    <nobr>Няня к грудничку</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/nanny-tutor/">
+                                                    <nobr>Няня - воспитатель</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/governess/">
+                                                    <nobr>Гувернантка</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/tutor/">
+                                                    <nobr>Репетитор</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/housekeeper/">
+                                                    <nobr>Домработница</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/nurse/">
+                                                    <nobr>Сиделка</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/chef/">
+                                                    <nobr>Повар</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/a-married-couple/">
+                                                    <nobr>Семейная пара</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/the-driver/">
+                                                    <nobr>Водитель</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/assistant-on-economy/">
+                                                    <nobr>Помощник по хозяйству</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/the-gardener/">
+                                                    <nobr>Садовник</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/economka/">
+                                                    <nobr>Экономка</nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/vakansi/uprarvlyayushchiy/">
+                                                    <nobr>Управляющий</nobr>
+                                                </a>
+
+                                            </li>
+
+
+
+                            <td>
+
+                                <a href="/prices/" class="root-item">
+
+                                    <span class="menuLt">
+
+                                        <span class="menuRt">
+
+                                            <span class="menuGd">
+
+                                                <span>
+
+                                                    Цены
+
+                                                </span>
+
+                                            </span>
+
+                                        </span>
+
+                                    </span>
+
+                                </a>
+
+                            </td>
+
+                            <td>
+
+                                <div class="firstLevelWrap">
+
+
+
+                                    <a href="/courses/" class="root-item">
+
+                                        <span class="menuLt">
+
+                                            <span class="menuRt">
+
+                                                <span class="menuGd">
+
+                                                    <span>
+
+                                                        Курсы
+
+                                                    </span>
+
+                                                </span>
+
+                                            </span>
+
+                                        </span>
+
+                                    </a>
+
+                                    <div class="secondLevelWrap">
+                                        <ul>
+
+                                            <li>
+
+                                                <a href="/courses/school-vip-housekeepers/">
+                                                    <nobr></nobr>
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="/courses/school-nurses-and-guvernerov/">
+                                                    <nobr></nobr>
+                                                </a>
+
+                                            </li>
+
+
+
+                            <td class="lastChild">
+
+                                <a href="/contacts/" class="root-item">
+
+                                    <span class="menuLt">
+
+                                        <span class="menuRt">
+
+                                            <span class="menuGd">
+
+                                                <span>
+
+                                                    Контакты
+
+                                                </span>
+
+                                            </span>
+
+                                        </span>
+
+                                    </span>
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </nav>
+            </div>
+            <!--top menu-->
+        </header>
+        <!--header-->
+
+        <!--top slider-->
+
+        <div class="topSlider">
+            <div class="sliderContainer">
+
+                <div class="oneImg">
+                    <span class="imgWrap">
+                        <img src="/upload/iblock/984/984238a931a8b2bc3b3d2fdc75f852e9.jpg" alt="Счастливая семья" />
+                    </span>
+                </div>
+
+                <div class="oneImg">
+                    <span class="imgWrap">
+                        <img src="/upload/iblock/fdd/fdd3a10f23e692a63803c126c6119465.jpg"
+                            alt="Няня-воспитатель в Туле" />
+                    </span>
+                </div>
+
+                <div class="oneImg">
+                    <span class="imgWrap">
+                        <img src="/upload/iblock/339/339cee22c2f5c17dc6f9ef7feb77b893.jpg"
+                            alt="Подбор горничной в Туле" />
+                    </span>
+                </div>
+
+                <div class="oneImg">
+                    <span class="imgWrap">
+                        <img src="/upload/iblock/279/279efb578e3ce86924e8e0e22917d647.jpg" alt="Садовник" />
+                    </span>
+                </div>
+
+                <div class="oneImg">
+                    <span class="imgWrap">
+                        <img src="/upload/iblock/433/433bf244632a9f7b470c72394eedb5ef.jpg" alt="Найти няню в Туле" />
+                    </span>
+                </div>
+
+                <div class="oneImg">
+                    <span class="imgWrap">
+                        <img src="/upload/iblock/3d9/3d9307c24997845cd5a1e14c471b080f.jpg"
+                            alt="Найти личного водителя" />
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--top slider-->
+
+
+        <!-- main top personal -->
+        <div class="mainTopPersonalOuter">
+            <div class="mainTopPersonalInner">
+                <div class="personal permanent">
+                    <div class="contentPersonal">
+                        <div class="imagePersonal"><img src="/i/permanentImg.png" alt="" /></div>
+                        <div class="headerPersonal"><img src="/i/permanentHeader.png"></div>
+                        <div class="textPersonal">
+                            Задаетесь вопросом, как найти домашнего повара, ответственную домработницу, специалистов для
+                            ухода за садовым участком или найти няню к своему ребенку? Агентство домашнего персонала
+                            &laquo;Ваш Дом&raquo; поможет решить любую из этих задач, подобрав вам постоянный персонал
+                            &ndash; быстро и профессионально. Наша база кандидатов – это проверенные специалисты,
+                            готовые к постоянной работе в доме заказчика. Поддерживать идеальную чистоту и порядок,
+                            обеспечить вкусное и здоровое питание семьи, присматривать за детьми – все это вы можете
+                            совершенно спокойно доверить профессионалам. Освободите время для того, что вы действительно
+                            хотите! </div>
+                    </div>
+                    <a class="more" href="/find-staff/"><span class="rtMore"><span
+                                class="gdMore">Подробнее</span></span></a>
+                </div>
+                <div class="betweenPesonal">
+                    <div>&nbsp;</div>
+                </div>
+                <div class="personal temporary">
+                    <div class="contentPersonal">
+                        <div class="imagePersonal"><img src="/i/temporaryImg.png" alt="" /></div>
+                        <div class="headerPersonal"><img src="/i/temporaryHeader.png"></div>
+                        <div class="textPersonal">
+                            Вам срочно нужна сиделка, няня, повара, грузчики, рабочие или любой другой персонал на
+                            несколько часов или на временную работу? Мы поможем вам выбрать подходящего помощника -
+                            быстро, надежно и, главное, выгодно. Наемный временный персонал &ndash; это рабочие и
+                            специалисты, которых вы можете привлечь для решения задач на любой срок, будь то нескольких
+                            часов или нескольких месяцев. Мы предлагаем оптимальные цены в каждом случае и тщательно
+                            подбираем персонал, чтобы вы спокойно могли доверить ему даже сложную и ответственную
+                            задачу. Обращайтесь к профессионалам! </div>
+                    </div>
+                    <a class="more" href="/prices/"><span class="rtMore"><span
+                                class="gdMore">Подробнее</span></span></a>
+                </div>
+            </div>
+        </div>
+        <!-- main top personal -->
+
+        <!-- main images -->
+
+        <div class="mainImages">
+            <div class="oneImage">
+                <span class="imageWrap">
+                    <img src="/upload/iblock/293/2936f22bfd8a74975f0aef1a43f4ad9c.png" alt="Найти няню в Туле" />
+                </span>
+            </div>
+            <div class="oneImage">
+                <span class="imageWrap">
+                    <img src="/upload/iblock/0b5/0b5a47b54f2645fe30ed4b3d3b52a2d9.png" alt="Найти сиделку в Туле" />
+                </span>
+            </div>
+            <div class="oneImage">
+                <span class="imageWrap">
+                    <img src="/upload/iblock/6d3/6d33ed2f7f054905ef98ca6c5bb09f90.png"
+                        alt="Найти домработницу в Туле" />
+                </span>
+            </div>
+            <div class="oneImage">
+                <span class="imageWrap">
+                    <img src="/upload/iblock/ff5/ff58c8493bbc0f5d17eb2063274d0906.png" alt="Найти горничную в Туле" />
+                </span>
+            </div>
+        </div> <!-- main images -->
+
+
+
+        <!--content-->
+        <div class="content main">
+            <h1>Подбор домашнего персонала "Ваш Дом" - работаем с 2004 года!</h1>
+
+            <p> <img src="/upload/medialibrary/a15/a151277883c0798a20a60ba7b3aa607b.jpg" align="left" width="217"
+                    height="224" alt="Подбор прислуги, домашнего персонала"
+                    title="Подбор прислуги, домашнего персонала" /></p>
+
+            <p class="MsoNormal"><span style="font-size: 12pt;">Нужна заботливая няня или опытная гувернантка для
+                    ребенка? Ищете личного водителя-профессионала? А может быть срочно нужен домашний повар или
+                    ответственная домработница? Добро пожаловать к нам, в <b>Агентство домашнего персонала &quot;Ваш
+                        Дом&quot;</b>!
+                    <br />
+
+                    <br />
+                    Услуги профессионалов домашнего сервиса позволят Вам освободить свое драгоценное время. Вы сможете
+                    посвятить его своим близким, заняться любимыми делами и, в конечном итоге, перестать откладывать на
+                    завтра, не успевая за нарастающим ритмом жизни. <o:p></o:p></span></p>
+
+            <p> </p>
+
+            <p class="MsoNormal"><span style="font-size: 12pt;">В нашем агентстве - строгий отбор специалистов. При этом
+                    мы всегда предлагаем достаточный выбор кандидатур по каждому профилю. Мы учитываем не только
+                    формальные требования клиента к персоналу для дома, но также и индивидуальные пожелания. Нам важно,
+                    чтобы профессионал, которого мы Вам подберем, не только качественно выполнял работу, но и оптимально
+                    подходил по личностным качествам, гармонично вписываясь в Вашу семейную атмосферу.
+                    <br />
+
+                    <br />
+                    <b>Агентство</b> <b>&quot;Ваш Дом&quot; успешно работает на рынке домашнего персонала с октября 2004
+                        года.</b> За годы своей работы мы зарекомендовали себя как одно из ведущих предприятий данной
+                    сферы. В штате агентства работают менеджеры с педагогическим образованием, а также квалифицированные
+                    и опытные психологи, которые помогут подобрать няню именно для Вашего ребенка, помощника именно в
+                    Ваш дом.
+                    <br />
+
+                    <br />
+                    Необходимость доверить заботу о ребенке или доме незнакомому человеку для многих связана с
+                    сомнениями на этот счет. Мы обеспечиваем уверенность клиентов полной безопасностью своих услуг, для
+                    чего проводим многоступенчатую проверку всех наших специалистов. Каждый кандидат проходит
+                    структурированное собеседование с психологами, проверку анкетных данных, документов и рекомендаций.
+                    По Вашему желанию дополнительно может проводиться проверка по линии МВД и по линии кредитов. Иными
+                    словами, перед тем, как работник придет в Ваш дом, мы сами удостоверимся в его благонадежности!
+                    <br />
+
+                    <br />
+                    Наемный персонал для дома – это дорого? Совсем, нет. Наша <b>гибкая ценовая политика</b> позволит
+                    найти работника, отталкиваясь от Ваших личных финансовых возможностей. При необходимости
+                    предоставляются пробные дни. Для постоянных клиентов действуют скидки.
+                    <br />
+
+                    <br />
+                    <b>В нашем Агентстве Вы всегда найдете понимание и поддержку.</b> Звоните: 70-40-18; 70-40-19,
+                    311-345 <o:p></o:p></span></p>
+
+            <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt;">Часто к нам обращаются,
+                    чтобы <a href="http://dom71.ru/find-staff/nanny-to-a-baby/" target="_self"><span
+                            style="color: blue;">найти няню в Туле</span></a> или <a
+                        href="http://dom71.ru/find-staff/nurse/" target="_self"><span style="color: blue;">найти
+                            сиделку</span></a> и мы в этом хорошо разбираемся. Но также мы можем подобрать постоянный
+                    персонал, например <a href="http://dom71.ru/find-staff/economka/"><span
+                            style="color: blue;">экономку</span></a> или <a
+                        href="http://dom71.ru/find-staff/the-driver/"><span style="color: blue;">личного
+                            водителя</span></a>. <o:p></o:p></span></p>
+
+            <p class="MsoNormal" style="margin-bottom: 0.0001pt;">На нашем сайте можно найти специалистов для любых
+                задач:</p>
+
+            <p class="MsoNormal"> </p>
+
+            <h2><a href="http://dom71.ru/find-staff/nurse/">Найти сиделку в Туле</a></h2>
+
+            <div>Добрый и отзывчивый персонал для ухода за людьми пожилого возраста, пациентами после операций и в
+                период реабилитации. У нас вы найдете сиделку, отвечающую всем вашим пожеланиям. Патронажное агентство в
+                Туле.</div>
+
+            <div>
+                <br />
+            </div>
+
+            <h2><a href="http://dom71.ru/find-staff/nanny-to-a-baby/">Найти Няню в Туле</a></h2>
+
+            <div>Мы подбираем ответственный персонал для сопровождения и воспитания детей любого возраста – от
+                грудничков до подростков. Няни, которых вы найдете у нас, искренне любят детей, имеют соответствующее
+                образование и опыт. </div>
+
+            <div>
+                <br />
+
+                <h2><a href="http://dom71.ru/find-staff/housekeeper/">Найти домработницу в Туле</a></h2>
+            </div>
+
+            <div>Квалифицированный и энергичный персонал для выполнения различных задач по дому – от уборки и чистки до
+                приготовления еды и ухода за дорогими поверхностями. С нашим персоналом идеальная чистота и порядок в
+                Вашем доме обеспечены! </div>
+
+            <div>
+                <br />
+
+                <h2><a href="http://dom71.ru/find-staff/assistant-on-economy/">Найти помощника по хозяйству в Туле</a>
+                </h2>
+            </div>
+
+            <div>Мы подбираем универсальных мастеров, способных решить любые задачи – от ремонтных работ до ведения
+                частного хозяйства. По вашим пожеланиям может выполняться подбор специалиста определенного профиля.
+            </div>
+
+            <div>
+                <br />
+
+                <h2><a href="http://dom71.ru/find-staff/tutor/">Найти репетитора в Туле</a></h2>
+            </div>
+
+            <div>За небольшой срок провести эффективное индивидуальное обучение ребенка по тем или иным дисциплинам под
+                силу только профессионалу. И именно такие – у нас. Мы подберем репетитора по школьным дисциплинам, для
+                подготовки к экзаменам или поступлению в ВУЗ.
+
+            </div>
+
+            <h2>Наша группа в Контакте:</h2>
+            <script type="text/javascript" src="https://vk.com/js/api/openapi.js?156"></script>
+
+            <!-- VK Widget -->
+            <div id="vk_groups"></div>
+            <script type="text/javascript">
+                VK.Widgets.Group("vk_groups", {
+                    mode: 3,
+                    width: 872
+                }, 89801461);
+            </script>
+
+        </div>
+        <!--content-->
+
+        <div class="brick">&nbsp;</div>
+    </div>
+    <!--footer-->
+    <footer class="footer">
+
+        <!--bottom menu-->
+        <div class="bottomMenuWrap">
+            <nav>
+
+
+
+                <ul class="bottomMenu">
+                    <li><a href="/" class="selected">О нас</a></li>
+                    <li class="betweenBottomLi"><span></span></li>
+                    <li><a href="/find-staff/">Подобрать персонал</a></li>
+                    <li class="betweenBottomLi"><span></span></li>
+                    <li><a href="/prices/">Цены</a></li>
+                    <li class="betweenBottomLi"><span></span></li>
+                    <li><a href="/vakansi/">Вакансии</a></li>
+                    <li class="betweenBottomLi"><span></span></li>
+                    <li><a href="/courses/">Курсы</a></li>
+                    <li class="betweenBottomLi"><span></span></li>
+                    <li><a href="/contacts/">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--bottom menu-->
+        <div class="bottomOther">
+            <!--contacts-->
+            <div class="bottomContacts">
+                <div class="bottomPhones">
+                    <span style='color:#fff;'>8 (4872) 70-40-18</span> <span style='color:#fff;'>8 (4872)
+                        70-40-19</span>
+                </div>
+            </div>
+            <!--contacts-->
+
+            <!--copyright-->
+            <div class="copyright">
+                <div class="uniText"> <a href="http://uniofweb.ru/" rel="nofollow">Разработано компанией
+                        &laquo;ЮниВеб&raquo;&nbsp;<time datetime="2013-03-01">2013</time></a> </div>
+
+                <div class="uniLogo"> <a href="http://uniofweb.ru/" rel="nofollow"><img src="/i/uniofweb.png"
+                            title="uniofweb" /></a> </div>
+            </div>
+            <!--copyright-->
+        </div>
+    </footer>
+    <!--footer-->
+</body>
+
+</html>
