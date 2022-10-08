@@ -121,7 +121,7 @@
    
    p {
        line-height: 17px;
-       padding: 0 0 15px;
+       padding: 0 0 100px;
        margin: 0;
        color: #4e2c1e;
        text-align: justify;
@@ -732,7 +732,7 @@ button {
        overflow: hidden;
        width: 100%;
        height: 45px;
-       background: url(/i/footer.png) repeat-x 0 bottom;
+       background: url(img/Фигура\ 7.png) repeat-x 0 bottom;
    }
    
    /*counters*/
