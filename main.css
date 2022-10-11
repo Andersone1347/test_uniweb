@@ -130,7 +130,7 @@
    a {
        font: 12px Tahoma, Arial;
        color: #4a2403;
-       text-decoration:  underline;
+       text-decoration:  none;
    }
    
    a:focus {
@@ -138,6 +138,7 @@
    }
    
    a:hover {
+       color: white; 
        text-decoration:  none;
    }
    
@@ -452,22 +453,19 @@ button {
 
 
 .slid {
-	height: 350px;
-	margin: 100px auto 0;
+	height: 430px;
+	margin-top: -92px;
 	position: relative;
-	width: 700px;
+	width: 924px;
 }
 
 .slider {
-	background-color: #ddd;
-	height: inherit;
+	height: 430px;
 	overflow: hidden;
 	position: relative;
-	width: inherit;
-	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-	-o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	width: 924px;
+    margin: 0;
+
 }
 
 .slid > input {
@@ -947,6 +945,7 @@ button {
        background: url(/img/орнамент.png) no-repeat 0 bottom;
        width: 803px;
        padding: 0 40px;
+       padding-top: ;
        margin: 50px auto 0;
    }
    
@@ -973,7 +972,8 @@ button {
    }
    
    .contentPersonal {
-       overflow: hidden;
+
+        overflow: hidden;
    }
    
    .permanent .imagePersonal {
@@ -995,7 +995,6 @@ button {
    }
    
    .textPersonal {
-       padding: 20px 0 0;
        color: #35190d;
        font: 13px Arial, Tahoma, Helvetica;
    }
@@ -1077,7 +1076,6 @@ button {
        margin: 0 15px;
        width: 180px;
        height: 187px;
-       border: 1px solid #a08357;
        text-align: center;
    }
    
