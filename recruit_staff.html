@@ -525,7 +525,311 @@
         </div>
         <!--top slider-->
         
-      
+      <!--content-->
+<div class="content">
+    <h1>Подобрать персонал</h1>
+
+
+
+<div class="personalFilter">
+<form name="arrFilter_form" action="/find-staff/?clear_cache=Y" method="get">
+<div class="personalFilterOrnament">&nbsp;</div>
+<div class="personalFilterOrnament right">&nbsp;</div>
+<div class="personalFilterContent">
+<table>
+    <tbody><tr>
+        <td><span>Показать только</span></td>
+        <!--<td>
+            <span class="filterSpanFirst">Стаж от</span>
+            <input type="text" name="arrFilter_pf[LENTH_OF_SERVICE][LEFT]" value=""><span class="filterSpan">до</span><input type="text" name="arrFilter_pf[LENTH_OF_SERVICE][RIGHT]" value="">
+            <span class="filterSpanLast">лет</span>
+        </td>-->
+        <td>
+            <span class="filterSpanFirst">Стаж от</span>
+            <input type="text" name="arrFilter_pf[AGE][LEFT]" value=""><span class="filterSpan">до</span><input type="text" name="arrFilter_pf[AGE][RIGHT]" value="">
+            <span class="filterSpanLast">лет</span>
+        </td>	
+        <td rowspan="2">
+            <span class="buttonSubmit"><span><input type="submit" name="set_filter" value="Подобрать"></span></span>
+            <input type="hidden" name="set_filter" value="Y">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="selectCustom filterSelect">
+                <select name="arrFilter_pf[POST][]">
+                    <option value="" selected="selected">все</option>
+            <option value="4">гувернантка</option>
+                    <option value="6">садовник</option>
+                    <option value="9">повар</option>
+                    <option value="10">няня к грудничку</option>
+                    <option value="11">няня-воспитатель</option>
+                    <option value="12">няня с проживанием</option>
+                    <option value="13">репетитор</option>
+                    <option value="14">логопед-дефектолог</option>
+                    <option value="15">домработница/горничная</option>
+                    <option value="16">сиделка</option>
+                    <option value="17">сиделка с проживанием</option>
+                    <option value="18">сиделка в больницу</option>
+                    <option value="19">семейная пара</option>
+                    <option value="20">мажордом</option>
+                                                        </select>
+                <div class="customIcon">&nbsp;</div>
+                <div class="customSelectWrap">все</div>
+            </div>
+        </td>
+        <td>
+            <div class="education">
+                <table class="educationTable">
+                    <tbody><tr>
+                        <td><span class="filterSpanFirst">Возраст от</span>
+                            <input type="text" name="arrFilter_pf[AGE][LEFT]" value=""><span class="filterSpan">до</span><input type="text" name="arrFilter_pf[AGE][RIGHT]" value="">
+                            <span class="filterSpanLast">лет</span>
+                        </td>	
+                    </tr>
+                </tbody></table>
+            </div>
+        </td>				
+    </tr>
+</tbody></table>
+</div>
+</form>
+</div>
+
+
+<br>
+
+
+
+<div class="findPersonalist">
+<table summary="">
+<tbody><tr>
+<th>Фио</th>
+<th>Должность</th>
+<th>Возраст</th>
+<th>Стаж работы</th>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=288">Минаева Татьяна Леонидовна</a></td>
+    <td class="postTd">
+        домработница/горничная				</td>
+    <td>56&nbsp;лет</td>
+    <td>7&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=287">Марченко Надежда Васильевна</a></td>
+    <td class="postTd">
+        сиделка				</td>
+    <td>55&nbsp;лет</td>
+    <td>2&nbsp;года</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=285">Гостева Марина Владимировна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>47&nbsp;лет</td>
+    <td>14&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=284">БоровковаСветлана Ивановна</a></td>
+    <td class="postTd">
+        сиделка				</td>
+    <td>47&nbsp;лет</td>
+    <td>10&nbsp;лет</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=283">Кувшинова Ольга Васильевна</a></td>
+    <td class="postTd">
+        домработница/горничная				</td>
+    <td>39&nbsp;лет</td>
+    <td>12&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=282">Маслова Елена Михайловна</a></td>
+    <td class="postTd">
+        домработница/горничная				</td>
+    <td>44&nbsp;года</td>
+    <td>11&nbsp;лет</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=281">Тутаева Светлана Николаевна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>45&nbsp;лет</td>
+    <td>22&nbsp;года</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=280">Филиппова Ольга Анатольевна</a></td>
+    <td class="postTd">
+        домработница/горничная				</td>
+    <td>36&nbsp;лет</td>
+    <td>4&nbsp;года</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=278">Гандзюк Елена Алексеевна</a></td>
+    <td class="postTd">
+        няня к грудничку				</td>
+    <td>47&nbsp;лет</td>
+    <td>4&nbsp;года</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=277">Бейдина Любовь Анатольевна</a></td>
+    <td class="postTd">
+        гувернантка				</td>
+    <td>53&nbsp;года</td>
+    <td>36&nbsp;лет</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=276">Нижегородцева Лариса Алексеевна</a></td>
+    <td class="postTd">
+        сиделка				</td>
+    <td>-</td>
+    <td>-&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=275">Ботвинева Марина Александровна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>-</td>
+    <td>10&nbsp;лет</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=274">Неструева Ольга Васильевна</a></td>
+    <td class="postTd">
+        гувернантка				</td>
+    <td>54&nbsp;года</td>
+    <td>15&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=273">Мыльцева Светлана Александровна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>42&nbsp;года</td>
+    <td>12&nbsp;лет</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=272">Завьялова Ирина Васильевна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>54&nbsp;года</td>
+    <td>20&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=271">Анципировская Татьяна Алексеевна</a></td>
+    <td class="postTd">
+                        </td>
+    <td>59&nbsp;лет</td>
+    <td>19&nbsp;лет</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=270">Калмыкова Татьяна Николаевна</a></td>
+    <td class="postTd">
+        гувернантка				</td>
+    <td>51&nbsp;год</td>
+    <td>27&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=269">Боборова Галина Николаевна</a></td>
+    <td class="postTd">
+        няня к грудничку				</td>
+    <td>62&nbsp;года</td>
+    <td>1&nbsp;год</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=268">Горохова Любовь Васильевна</a></td>
+    <td class="postTd">
+        сиделка				</td>
+    <td>56&nbsp;лет</td>
+    <td>5&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=267">Овсянникова Екатерина Анатольевна</a></td>
+    <td class="postTd">
+        домработница/горничная				</td>
+    <td>47&nbsp;лет</td>
+    <td>4&nbsp;года</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=266">Антипова Татьяна Михайловна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>50&nbsp;лет</td>
+    <td>20&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=265">Богданова Наталия Станиславовна</a></td>
+    <td class="postTd">
+        гувернантка				</td>
+    <td>54&nbsp;года</td>
+    <td>10&nbsp;лет</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=264">Харитовова Татьяна Николаевна</a></td>
+    <td class="postTd">
+        сиделка				</td>
+    <td>61&nbsp;год</td>
+    <td>33&nbsp;года</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=263">Визирова Ирина Константиновна</a></td>
+    <td class="postTd">
+        сиделка с проживанием				</td>
+    <td>46&nbsp;лет</td>
+    <td>2&nbsp;года</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=262">Трофимова Наталья Николаевна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>53 &nbsp;года</td>
+    <td>28&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=261">Кузнецова Нина Николаевна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>58&nbsp;лет</td>
+    <td>31&nbsp;год</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=260">Казарина Наталья Владимировна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>44&nbsp;года</td>
+    <td>с 2006 по настоящее время&nbsp;лет</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=259">Анохина Татьяна Станиславовна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>57&nbsp;лет</td>
+    <td>12&nbsp;лет</td>
+</tr>
+        <tr class="trOdd">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=125">Гудкова Марина Константиновна</a></td>
+    <td class="postTd">
+        няня-воспитатель				</td>
+    <td>45&nbsp;лет</td>
+    <td>21&nbsp;год</td>
+</tr>
+        <tr class="trEven">
+    <td><a class="fancybox.ajax" rel="anketa" href="/ajax/anketa.php?ELEMENT_ID=120">Логунова Екатерина Викторовна</a></td>
+    <td class="postTd">
+        логопед-дефектолог;&nbsp;няня-воспитатель;&nbsp;				</td>
+    <td>23&nbsp;года</td>
+    <td>-</td>
+</tr>
+</tbody></table>
+</div>
+
+
+<div>У нас вы можете подобрать постоянный домашний персонал. </div>
+
+
+
+
+</div>
+<!--content-->
 
         <!--content-->
         <div class="content main">

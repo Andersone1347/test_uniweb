@@ -1200,7 +1200,7 @@ button {
    }
    
    .personalFilterOrnament {
-       background: url(/i/sprites.png) no-repeat -433px 0;
+       background: url(/img/орнамент1\ копия\ 2.png) no-repeat 0px 0;
        width: 64px;
        height: 64px;
        position: absolute;
@@ -1209,7 +1209,7 @@ button {
    }
    
    .personalFilterOrnament.right {
-       background: url(/i/sprites.png) no-repeat -503px 0;
+       background: url(/img/орнамент1\ копия\ 2.png) no-repeat -819px 0;
        left: auto;
        right: -10px;
    }
