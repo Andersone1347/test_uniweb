@@ -121,10 +121,13 @@
    
    p {
        line-height: 17px;
-       padding: 0 0 100px;
        margin: 0;
        color: #4e2c1e;
        text-align: justify;
+       padding-top: 5px;
+       padding-left: 20px;
+       padding-right: 20px;
+
    }
    
    a {
@@ -611,8 +614,13 @@ button {
        padding: 25px 20px 30px;
        font: 14px Arial, Tahoma, Verdana;
        color: #4e2c1e;
+       margin-top: 15px;
    }
    
+   .content_down {
+    padding-bottom: 200px;
+   }
+
    .content p img {
        border: 1px solid #8e7f57;
    }
@@ -945,7 +953,7 @@ button {
        background: url(/img/орнамент.png) no-repeat 0 bottom;
        width: 803px;
        padding: 0 40px;
-       padding-top: ;
+
        margin: 50px auto 0;
    }
    
@@ -1025,6 +1033,8 @@ button {
 
    
    .buttonSubmit span input {
+       background-color: #814B04;
+       border-radius: 5%;
        border: none;
        margin: 0;
        font: 14px Arial, Tahoma;
@@ -1035,6 +1045,10 @@ button {
        height: 26px;
    }
    
+   .buttonSubmit span input:hover {
+    background-color: #E8C478;
+   }
+
    .temporary .more, .permanent .more {
        position: absolute;
        bottom: 15px;
@@ -1334,9 +1348,10 @@ button {
    .selectCustom.filterSelect .customIcon {
        width: 203px;
        height: 28px;
-       background: url(/i/sprites.png?qwe=qwe) no-repeat 190px -422px;
-       /*background: url(/i/sprites.png) no-repeat -318px -79px;*/
+       background: url(img/Группа\ 1.png) no-repeat 191px;
+      
    }
+
    
    .personalFilterContent table td .educationTable {
        width: auto;
@@ -1352,9 +1367,7 @@ button {
    
    /*filter*/
    
-   .findPersonalist {
-       padding: 10px 0 35px;
-   }
+
    
    .findPersonalist table {
        width: 100%;
