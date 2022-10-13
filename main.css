@@ -1734,15 +1734,9 @@ button {
       Media Queries
       ========================================================================== */
    
-   @media only screen and (min-width: 35em) {
+  
    
-   }
-   
-   @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-          only screen and (min-resolution: 144dpi) {
-   
-   }
-   
+
    /* ==========================================================================
       Helper classes
       ========================================================================== */
@@ -1880,5 +1874,10 @@ button {
        }
    }
 
-
-   
+@media screen and (max-width: 992px;) {
+    
+.col-3 {
+    width: calc(50% - 15px);
+}
+}
+    
