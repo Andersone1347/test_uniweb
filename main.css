@@ -130,20 +130,7 @@
 
    }
    
-   a {
-       font: 12px Tahoma, Arial;
-       color: #4a2403;
-       text-decoration:  none;
-   }
-   
-   a:focus {
-       outline: none;
-   }
-   
-   a:hover {
-       color: white; 
-       text-decoration:  none;
-   }
+
    /* тесто */
    .wrapper {
        width: 924px;
@@ -294,18 +281,40 @@ button {
      4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
     
-  }
-  
-  /* 1 */
-  .btn-1 {
-    background: #E8C478;
-    border: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb( 216, 201, 146 );
+    border-radius: 5px;
+    background-image: -moz-linear-gradient( 90deg, rgb( 250, 237, 199 ) 0%, rgb( 234, 207, 143 ) 12.72%, rgb( 232, 196, 120 ) 58.179%, rgb( 255, 249, 224 ) 95.85%, rgb( 255, 249, 224 ) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb( 250, 237, 199 ) 0%, rgb( 234, 207, 143 ) 12.72%, rgb( 232, 196, 120 ) 58.179%, rgb( 255, 249, 224 ) 95.85%, rgb( 255, 249, 224 ) 100%);    
+
+    
+        font-size: 16px;
+        font-family: "Book Antiqua";
+        color: rgb( 71, 40, 0 );
+
 
   }
-  .btn-1:hover {
-     background: #7B470B;
-     color: #000;
-  }
+   
+.custom-btn:hover {
+
+        border-style: solid;
+        border-width: 1px;
+        border-color: hsl(35deg 76% 38%);
+        border-radius: 5px;
+        background-image: -moz-linear-gradient( 90deg, rgb( 250, 237, 199 ) 0%, rgb( 119, 71, 11 ) 0%, rgb( 211, 149, 56 ) 72.607%, rgb( 245, 220, 185 ) 95.85%, rgb( 255, 249, 224 ) 100%);
+        background-image: -webkit-linear-gradient( 90deg, hsl(45deg 84% 88%) 0%, hsl(33deg 83% 25%) 0%, hsl(36deg 64% 52%) 72.607%, hsl(35deg 75% 84%) 95.85%, hsl(48deg 100% 94%) 100%);
+        font-size: 16px;
+        font-family: "Book Antiqua";
+        color: hsl(0deg 0% 100%);
+        text-align: justifyAll;
+        text-shadow: 0.5px 0.866px 0px rgb(17 17 26);
+
+}
+
+
+  /* 1 */
+
 
    
    /*/header*/
@@ -1010,18 +1019,6 @@ button {
    .textPersonal p {
        color: #35190d;
        font: 13px Arial, Tahoma, Helvetica;
-   }
-   
-   .more, .buttonSubmit {
-       
-       display: inline-block;
-       *zoom: 1;
-       *display: inline;
-       text-decoration: none;
-       padding: 0 0 0 4px;
-       color: #fff;
-       text-transform: uppercase;
-       text-shadow: 0 1px 2px #11111a;
    }
    
    .more:hover, .buttonSubmit:hover {
